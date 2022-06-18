@@ -1,0 +1,76 @@
+:root{
+    --image1:url("../img/img1.jpeg");
+    --image2:url("../img/img2.jpeg");
+    --image3:url("../img/img3.jpeg");
+    --image4:url("../img/img4.jpeg");
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(400deg, #FFFFFF,  #1C3F80);
+}
+
+.container{
+    outline: 2px solid #333;
+    width: 90%;
+    min-width: auto;
+    height: 200vh;
+    margin: 50px auto;
+    display: grid;
+    background-color:#333;
+
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(8, 1fr);
+    gap: 5px;
+    grid-template-areas:
+    "elemento1 elemento1 elemento3 elemento3"
+    "elemento1 elemento1 elemento3 elemento3"
+    "elemento2 elemento2 elemento3 elemento3"
+    "elemento2 elemento2 elemento3 elemento3"
+    "elemento2 elemento2 elemento3 elemento3"
+    "elemento4 elemento4 elemento4 elemento4"
+    "elemento4 elemento4 elemento4 elemento4"
+    "elemento4 elemento4 elemento4 elemento4";
+
+}
+
+.element{
+    font-size: 2rem;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    background-size: cover;
+    background-position: center center;
+
+}
+.element1{
+background-color: crimson;
+background-image: var(--image1);
+grid-area: elemento1;
+
+}
+.element2{
+background-color: dodgerblue;
+background-image: var(--image2);
+
+grid-area: elemento2;
+
+}
+.element3{
+background-color: coral;
+background-image: var(--image3);
+
+grid-area: elemento3;
+
+}
+.element4{
+background-color: darkslateblue;
+background-image: var(--image4);
+grid-area: elemento4;
+
+}
